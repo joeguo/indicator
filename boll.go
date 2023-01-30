@@ -28,7 +28,7 @@ func (this *Boll) dma(lines []Kline, ma float64) float64 {
 	for i := 0; i < s; i++ {
 		sum += (lines[i].Close - ma) * (lines[i].Close - ma)
 	}
-	return math.Sqrt(sum / float64(this.n-1))
+	return math.Sqrt(sum / float64(this.n))
 }
 
 func (this *Boll) Boll(lines []Kline) (mid []float64, up []float64, low []float64) {
